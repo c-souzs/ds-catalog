@@ -54,7 +54,7 @@ public class CategoryService {
 
             return new CategoryDTO(category);
         } catch (EntityNotFoundException e) {
-            throw new EntityNotFoundException("Categoria não encontrada");
+            throw new EntityNotFoundException("Categoria não encontrada.");
         }
     }
 
