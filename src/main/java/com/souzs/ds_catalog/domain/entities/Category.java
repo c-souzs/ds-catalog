@@ -10,8 +10,6 @@ import java.time.Instant;
 @Table(name = "tb_category")
 @Getter @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @ToString
 public class Category {
     @Id
@@ -38,5 +36,10 @@ public class Category {
     @PreUpdate
     public void preUpdate() {
         updatedAt = Instant.now();
+    }
+
+    public Category(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 }
